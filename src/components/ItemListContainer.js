@@ -1,44 +1,20 @@
-import { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
+import {List} from "./ItemList"
 
 
-    const ItemListContainer = ({items}) => {
-        const {id} = useParams();
-        const [state, setState] = useState([])
-        
-        useEffect(()=>{
-            const res = fetch("https://rickandmortyapi.com/api/character")
-            res.then((res)=>{
-                return res.json()
-            }).then((value)=>{
-                setState(value.results)
-            })
-            },[])
-        
-        useEffect(()=>{
-            const res = state.filter((value)=>{
-                return value.id == id.id
-            })
-            setState(res)
-        },[id])
-
-        return(
-        <div className="cards">
-            {state.map((items)=>{
-                return (
-                    <>
-                        <Card className="card" style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={items.image} key={items.id} />
-                                <Card.Body>
-                                    <Card.Title><NavLink to={`/items/${items.id}`}>{items.name}</NavLink></Card.Title>
-                                </Card.Body>
-                        </Card>
-                    </>
-                )
-            })}
-        </div>
-    )
-}
-
-export default ItemListContainer;
+export const ItemListContainer = () =>{
+    const [content, setContent] = useState([]);
+    const {id} = useParams();
+    
+    useEffect(() => {
+        const URLRating = `https://api.jikan.moe/v4/anime?rating=${id}`;
+        fetch(URLRating)
+        .then((res)=>res.json())
+        .then((data)=>setContent(data.data))
+        .catch((err)=> console.log(err));
+    }, [id])
+    
+    
+    return content.length ? <List items={content} /> : <h2>Cargando...</h2>;
+};
