@@ -1,0 +1,78 @@
+header {
+  border-bottom: 1px solid whitesmoke;
+  font-size: 18px;
+  font-family: "Lexend Exa";
+  background-color: black;  
+}
+
+.icon-title {
+  font-size: 50px;
+  font-family: "Rock Salt", cursive;
+  cursor: pointer;
+  color: #f4f6f7;
+}
+
+.span-title > span {
+  color: #d7415d;
+  font-size: 18px;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  gap: 50px;
+  cursor: pointer;
+}
+
+.subMenu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  
+}
+
+.subMenu > li {
+  width: 300px;
+  height: auto;
+  display: none;
+  padding: 10px;
+  transform: translateX(-25px);
+}
+
+.subMenu li > a:hover {
+  color: white;
+}
+
+.menu li:hover {
+  color: gray;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.menu li:hover .subMenu li {
+  display: block;
+}
+
+.subMenu li:hover{
+  background-color: #d7415d;
+  color: white;
+}
+
+.eslogan{
+  font-family: "Gloria Hallelujah", cursive;
+  color: whitesmoke;
+  font-size: 60px;
+}
+
+h3>a{
+  text-decoration: none;
+  color: white;
+}
+

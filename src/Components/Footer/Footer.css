@@ -1,0 +1,14 @@
+.icon-title {
+    font-size: 50px;
+    font-family: "Rock Salt", cursive;
+    cursor: pointer;
+    color: #f4f6f7;
+    text-align: center; 
+  }
+
+.footer {
+  background-color: black;
+  margin-top: 30px;
+  text-align: center;
+  color: whitesmoke;
+}

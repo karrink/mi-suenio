@@ -1,0 +1,13 @@
+.titulos {
+  color: white;
+  margin-top: 20px;
+  height: 40px;
+  font-family: "Lexend Exa";
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.itemList {
+  min-height: 90vh;
+}

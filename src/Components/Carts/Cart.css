@@ -1,0 +1,13 @@
+.cart{
+    background-color: white;
+    min-height: 80vh;
+}
+
+.cartVacio{
+    height: 80vh;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}

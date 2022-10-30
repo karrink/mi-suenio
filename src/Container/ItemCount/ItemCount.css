@@ -1,0 +1,7 @@
+.span {
+  font-size: 30px;
+}
+
+.span > i {
+  color: darkblue;
+}
